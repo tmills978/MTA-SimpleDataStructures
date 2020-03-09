@@ -29,6 +29,11 @@ namespace SimpleDatabaseStructures
 
         public string GetTextBoxData()
         {
+            return textBox1.Text;
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
