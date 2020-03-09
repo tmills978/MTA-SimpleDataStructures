@@ -37,9 +37,19 @@ namespace SimpleDatabaseStructures
                 i++;
             }
             label2.Text = "Average mark is " + (total / marks.Length).ToString();
+            Array.Sort(marks);
+            foreach(int x in marks)
+            {
+                label2.Text = label2.Text + x + ", ";
+            }
         }
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
         {
 
         }
