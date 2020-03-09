@@ -24,7 +24,19 @@ namespace SimpleDatabaseStructures
 
         private void Button1_Click(object sender, EventArgs e)
         {
-
+            int i = 0;
+            int total = 0;
+            int number = Convert.ToInt32(comboBox1.Text);
+            int[] marks = new int[number];
+            while (i < number)
+            {
+                EnterData myEnterData = new EnterData();
+                myEnterData.ShowDialog();
+                marks[i] = Convert.ToInt32(myEnterData.GetTextBoxData());
+                total = total + marks[i];
+                i++;
+            }
+            label2.Text = "Average mark is " + (total / marks.Length).ToString();
         }
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
